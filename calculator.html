@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All-in-One Environmental Calculator</title>
+  <script src="calculator.js"></script> <!-- JavaScript link added -->
+  <link rel="stylesheet" href="calculator.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; overflow: hidden; }
+    
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      padding: 20px;
+    }
+
+    header, footer {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    .content {
+      margin-top: 80px; /* Adjust based on the height of your header */
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2em;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .tab {
+      margin: 0 20px;
+      cursor: pointer;
+      padding: 20px 40px;
+      background: #4CAF50;
+      color: white;
+      border-radius: 10px;
+      font-size: 2em;
+    }
+
+    .tab.active {
+      background: #45a049;
+    }
+
+    .section {
+      display: none;
+      width: 100%;
+      max-width: 1200px;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      margin: 20px;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .calculator-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 20px auto;
+    }
+
+    h1, h2, label, button {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .chart-container {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.5em;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .tip {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Video Background -->
+  <video class="video-bg" autoplay muted loop>
+    <source src="vac222.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Content to appear above video -->
+  <div class="content">
+    <header>
+      <nav>
+        <h1>Green Energy Awareness</h1>
+        <ul>
+            <li><a href="index.html">Home 🏠</a></li>
+            <li><a href="search.html">Search 🔍</a></li>
+            <li><a href="solar.html">Solar Energy ☀️</a></li>
+            <li><a href="wind.html">Wind Energy 🌬️</a></li>
+            <li><a href="hydro.html">Hydroelectric 💧</a></li>
+            <li><a href="https://forms.office.com/r/mzeRpsfuG6">Quiz 📝</a></li>
+            <li><a href="calculator.html">Calculator 🧮</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1>All-in-One Environmental Calculator</h1>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab active" onclick="showSection('water')">Water Usage</div>
+      <div class="tab" onclick="showSection('tree-cutting')">Tree Cutting</div>
+      <div class="tab" onclick="showSection('tree-growing')">Tree Growing</div>
+      <div class="tab" onclick="showSection('carbon-footprint')">Carbon Footprint</div>
+      <div class="tab" onclick="showSection('energy')">Energy Usage</div>
+      <div class="tab" onclick="showSection('recycling')">Recycling Impact</div>
+    </div>
+
+    <!-- Water Usage Section -->
+    <div class="section active" id="water">
+      <div class="calculator-container">
+        <h2>Water Usage Calculator</h2>
+        <form id="water-form">
+          <label for="shower-time">Shower Time (e.g., 30 minutes)</label><br>
+          <input type="text" id="shower-time" placeholder="e.g., 10 minutes"><br><br>
+          <label for="plants-water">Water Plants (liters per week)</label><br>
+          <input type="number" id="plants-water" placeholder="e.g., 15"><br><br>
+          <button type="button" onclick="calculateWater()">Calculate</button>
+        </form>
+        <div class="chart-container">
+          <canvas id="waterChart"></canvas>
+        </div>
+        <div class="tip" id="water-tip"></div>
+      </div>
+    </div>
+
+    <!-- Tree Cutting Impact Section -->
+    <div class="section" id="tree-cutting">
+      <div class="calculator-container">
+        <h2>Tree Cutting Impact</h2>
+        <form id="tree-cutting-form">
+          <label for="trees-cut">Number of Trees Cut</label><br>
+          <input type="number" id="trees-cut" placeholder="e.g., 5"><br><br>
+          <button type="button" onclick="calculateTreeCutting()">Calculate</button>
+        </form>
+        <div class="chart-container">
+          <canvas id="treeCuttingChart"></canvas>
+        </div>
+        <div class="tip" id="tree-cutting-tip"></div>
+      </

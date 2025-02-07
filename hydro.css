@@ -1,0 +1,115 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+/* Header Section */
+header {
+    background-color: #006400; /* Dark green background for header */
+    color: white;
+    padding: 2.5em 0; /* Increased padding */
+    text-align: center;
+    font-size: 2em; /* Increased font size */
+    font-weight: bold;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background: transparent;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2em; /* Increased font size */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 40px; /* Increased padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    color: #333;
+    width: calc(100% - 80px); /* Adjusted to account for padding */
+    height: calc(100vh - 126px); /* Adjust height to cover full page minus header and footer */
+    overflow: auto; /* Allow scrolling if content overflows */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Titles with Light Green Background */
+.topic h2, .topic h3 {
+    background: rgba(144, 238, 144, 0.7); /* Light green background for headings */
+    padding: 15px; /* Increased padding */
+    border-radius: 6px;
+    color: #006400; /* Dark green text color */
+    margin-top: 20px;
+    width: 100%; /* Full width */
+    text-align: left; /* Left align text */
+    font-size: 2.5em; /* Increased font size */
+    font-weight: bold; /* Bold text */
+}
+
+/* Paragraph Styling */
+.topic p {
+    font-size: 3em; /* Increased font size */
+    line-height: 2.5;
+    margin-top: 10px;
+    width: 100%; /* Full width */
+    text-align: left; /* Left align text */
+    font-weight: bold; /* Bold text */
+}
+
+/* Blockquote Styling */
+blockquote {
+    background-color: rgba(224, 255, 224, 0.9); /* Transparent green */
+    border-left: 5px solid #006400;
+    padding: 15px; /* Increased padding */
+    font-style: italic;
+    color: #333;
+    margin: 20px 0;
+    width: 100%; /* Full width */
+    text-align: left; /* Left align text */
+    font-size: 3em; /* Increased font size */
+    font-weight: bold; /* Bold text */
+}
+
+/* Image Styling */
+.topic-image {
+    width: 100%;
+    max-width: 1200px; /* Increased max width */
+    border-radius: 8px;
+    margin-top: 20px; /* Increased margin */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #006400; /* Dark green background for footer */
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Increased padding */
+    font-size: 2.5em; /* Increased font size */
+    font-weight: bold; /* Bold text */
+    position: fixed;
+    width: 100%;
+    bottom: 0; /* Stick to bottom */
+}

@@ -1,0 +1,115 @@
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+/* Header Section */
+
+header {
+    background-color: #006400; /* Dark green background for header */
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background: transparent;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.calculator-container {
+  color:darkgreen;
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input-box {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.result-box {
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  color: #000; /* Black text for better contrast */
+}
+
+.result-box h3 {
+  margin: 0 0 10px 0;
+}
+
+.result-box #graphics-placeholder {
+  margin-top: 10px;
+  background-color: rgba(240, 240, 240, 1);
+  border: 1px solid #ddd;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-box #graphics-placeholder::before {
+  content: 'Your graphics will appear here.';
+  color: #666;
+  font-size: 14px;
+}
+
+footer {
+    background-color: lightgreen;
+    text-align: center;
+    padding: 10px;
+    color: darkgreen;
+    font-size: 14px;
+    border-top: 2px solid darkgreen;
+}
