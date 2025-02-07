@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Energy - Green Energy Awareness</title>
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" type="text/css" href="C:\Users\hp\OneDrive\Documents\Desktop\environment website\css\search.css">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="butterfly.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <h1>Green Energy Awareness</h1>
+            <ul>
+                <li><a href="index.html">Home 🏠</a></li>
+                <li><a href="search.html">Search 🔍</a></li>
+                <li><a href="solar.html">Solar Energy ☀️</a></li>
+                <li><a href="wind.html">Wind Energy 🌬️</a></li>
+                <li><a href="hydro.html">Hydroelectric 💧</a></li>
+                <li><a href="https://forms.office.com/r/mzeRpsfuG6">Quiz 📝</a></li>
+                <li><a href="calculator.html">Calculator 🧮</a></li>
+            </ul>
+        </nav>
+    </header> <br><br>
+    <!-- Play Button -->
+<button id="play-button" onclick="document.getElementById('background-audio').play()">click for the magical sound</button>
+
+<style>
+    #play-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 20px 40px; /* Increased padding */
+        font-size: 4em; /* Increased font size */
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        border-radius: 10px; /* Adjusted border radius */
+        cursor: pointer;
+    }
+</style>
+
+
+    <!-- Audio Element -->
+    <audio id="background-audio" autoplay loop>
+        <source src="Mahabharat Krishna Flute Ringtone Download Mp3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Play Button -->
+    <button id="play-button" onclick="document.getElementById('background-audio').play()">click for the magical sound</button>
+
+    <!-- Search Container -->
+    <div class="search-container">
+        <h1> EXPLORE ABOUT ENVIROMENT </h1>
+        <input type="text" id="searchInput" placeholder="Search for energy or wildlife topics...">
+        <button id="searchBtn">Search</button>
+        <button id="reloadBtn">Reload</button> <!-- Reload Button -->
+    </div>
+
+    <!-- Search Results -->
+    <section id="searchResults"></section>
+    <script src="C:\Users\hp\OneDrive\Documents\Desktop\environment website\java script\search.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
+

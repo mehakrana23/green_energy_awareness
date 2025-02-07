@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Energy Awareness</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Video Background */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the entire screen */
+            z-index: -1; /* Send the video to the background */
+        }
+
+        /* Audio Player */
+        #background-audio {
+            display: none; /* Hide the audio player */
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            position: relative; /* Ensure text is above video */
+            z-index: 1;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #010f06; /* Dark green background for header */
+            color: white;
+            padding: 2em 0; /* Increased padding */
+            text-align: center;
+            font-size: 3em; /* Increased font size */
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+        }
+
+        /* Navigation Menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            background: transparent;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: rgb(240, 241, 237);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 2.5em; /* Increased font size */
+            transition: color 0.3s; /* Smooth transition */
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #471eb8; /* Light blue on hover */
+        }
+
+        /* Hero Section */
+        .hero {
+            margin: 60px 0; /* Increased margin */
+        }
+
+        .hero-content h2 {
+            font-size: 4.5em; /* Increased font size */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Add text shadow */
+        }
+
+        .hero-content h4 {
+            font-size: 3.5em; /* Increased font size */
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 2.5em; /* Increased font size */
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(167, 229, 11, 0.6); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Information Sections */
+        .info-box {
+            background-color: rgba(19, 128, 0, 0.7); /* Dark green background */
+            padding: 30px;
+            margin: 40px auto;
+            border-radius: 10px;
+            max-width: 900px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+            transition: transform 0.3s; /* Smooth hover effect */
+        }
+
+        .info-box:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+        .info-box h2 {
+            font-size: 3.5em; /* Increased font size */
+            color: #100101b9;
+            margin-bottom: 10px;
+            transition: color 0.3s; /* Smooth transition */
+        }
+
+        .info-box h2:hover {
+            color: #ade6c2; /* Light blue on hover */
+        }
+
+        .info-box p {
+            font-size: 3.3em; /* Increased font size */
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        /* Play Button Styling */
+        #play-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 20px 40px; /* Increased padding */
+            font-size: 2em; /* Increased font size */
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 10px; /* Adjusted border radius */
+            cursor: pointer;
+        }
+
+        /* Keyframes for Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated-words {
+            display: inline-block;
+            animation: fadeInUp 1s ease-in-out both;
+        }
+
+        /* Apply animation to specific elements */
+        .hero-content h2 .animated-words,
+        .hero-content h4 .animated-words,
+        .hero-content p .animated-words {
+            animation-delay: 0.5s; /* Adjust the delay as needed */
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="background-video">
+        <source src="vac222.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Play Button -->
+    <button id="play-button" onclick="document.getElementById('background-audio').play()">Click to Start Magical Sound</button>
+
+    <!-- Audio Background -->
+    <audio id="background-audio" loop>
+        <source src="nature-sounds-240504.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <a href="#"><img src="C:\Users\hp\OneDrive\Pictures\Screenshots\green planet.jpg" class="logo" alt="" height="100"></a>
+            <h1>Green Energy Awareness</h1>
+            <ul>
+                <li><a href="index.html">Home 🏠</a></li>
+                <li><a href="search.html">Search 🔍</a></li>
+                <li><a href="solar.html">Solar Energy ☀️</a></li>
+                <li><a href="wind.html">Wind Energy 🌬️</a></li>
+                <li><a href="hydro.html">Hydroelectric 💧</a></li>
+                <li><a href="https://forms.office.com/r/mzeRpsfuG6">Quiz 📝</a></li>
+                <li><a href="calculator.html">Calculator 🧮</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Search Bar -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2><span class="animated-words">Welcome to Green Energy Awareness</span></h2>
+            <h4><span class="animated-words">Learn, interact, and explore the world of renewable energy!</span></h4>
+            <p><span class="animated-words">Nature! The majestic, awe-inspiring, and life-giving force that surrounds us. As John Muir once said, "In every walk with nature, one receives far more than he seeks." Nature is the ultimate source of inspiration, comfort, and wonder. It provides us with oxygen, water, food, and shelter, making it our life support system. As the rhyme goes, "Nature, nature, all around, A beautiful world, without a sound. Trees sway gently, birds sing sweet, A perfect harmony, for all to meet."</span></p>
+        </div>
+    </section>
+
+    <!-- Information Sections -->
+    <section id="solar">
+        <div class="info-box">
+            <a href="solar.html"><h2 class="animated-words">Solar Energy</h2></a>
+            <p class="animated-words">Explore how solar energy is transforming the world.</p>
+        </div>
+    </section>
+
+    <section id="wind">
+        <div class="info-box">
+            <a href="wind.html"><h2 class="animated-words">Wind Energy</h2></a>
+            <p class="animated-words">Discover the benefits and power of wind energy.</p>
+        </div>
+        <section id="hydro">
+            <div class="info-box">
+                <a href="hydro.html"><h2>Hydroelectric Power</h2></a>
+                <p>Learn about hydroelectric power and its impact on the environment.</p>
+            </div>
+        </section>
+    
+        <!-- Interactive Features -->
+        <section id="quiz">
+            <div class="info-box">
+                <a href="https://forms.office.com/r/mzeRpsfuG6"><h2>Take the Green Quiz</h2></a>
+                <p>Test your knowledge about renewable energy sources.</p>
+            </div>
+        </section>
+    
+        <section id="calculator">
+            <div class="info-box">
+                <a href="calculator.html"><h2>Energy Savings Calculator</h2></a>
+                <p>Calculate your potential energy savings!</p>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Green Energy Awareness. All rights reserved.</p>
+        </footer>
+    
+    </body>
+    </html>
